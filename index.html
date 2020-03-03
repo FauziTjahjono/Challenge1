@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <title>SpaceX Fauzi</title>
+    </head>
+    <body id="main">
+        <div id="navbar">
+            <img id="logo" src="./logo.png"/>
+        </div>
+        <div id="parent">
+            
+            <!-- Boog -->
+            <canvas class='outside graph'></canvas>
+            <script>
+                Chart.defaults.global.defaultFontFamily = 'Lao MN';
+                var myOut = document.querySelector(".outside").getContext("2d");
+                var outsideGraph = new Chart(myOut, {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Kerosine", ""],
+                        datasets: [{
+                            backgroundColor: ["rgb(69, 158, 92)", "rgb(255, 255, 255)"],
+                            data: [1200, 1200]
+                        }],
+                    },
+                    options: {
+                        circumference: Math.PI,
+                        rotation: Math.PI,
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: "Brandstof in kerosine",
+                            fontColor: "rgb(255, 255, 255)",
+                            fontSize: 24,
+                            fontStyle: "normal"
+                    },
+                    }
+                })
+            </script>
+            
+            <div id="son">
+
+                <!-- Pie -->
+                <canvas class="pie graph"></canvas>
+                <script>
+                    Chart.defaults.global.defaultFontFamily = 'Lao MN';
+                    var myPie = document.querySelector(".pie").getContext('2d');
+                    var pieGraph = new Chart(myPie, {
+                        type: "pie",
+                        data: {
+                            labels: ["Aaardappels", "Vlees", "Water", "Fruit"],
+                            datasets: [{
+                                backgroundColor: ['rgb(69, 158, 92)', 'rgb(215, 55, 55)', 'rgb(47, 167, 201)', 'rgb(251, 144, 38)'],
+                                data: [8, 20, 300, 8]
+                            }]
+                        },
+                        options: {
+                            aspectRatio: 1,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: "Voedselvoorraad in liter/kg",
+                                fontColor: "rgb(255, 255, 255)",
+                                fontSize: 24,
+                                fontStyle: "normal"
+                            },
+                        }
+                    })
+                </script>
+
+                <!-- Boog -->
+                <canvas class='arc graph'></canvas>
+                <script>
+                    Chart.defaults.global.defaultFontFamily = 'Lao MN';
+                    var myArc = document.querySelector(".arc").getContext("2d");
+                    var arcGraph = new Chart(myArc, {
+                        type: "doughnut",
+                        data: {
+                            labels: ["Kerosine", ""],
+                            datasets: [{
+                                backgroundColor: ["rgb(69, 158, 92)", "rgb(255, 255, 255)"],
+                                data: [1200,1200]
+                            }],
+                        },
+                        options: {
+                            circumference: Math.PI,
+                            rotation: Math.PI,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: "Brandstof in Kerosineliters",
+                                fontColor: "rgb(255, 255, 255)",
+                                fontSize: 24,
+                                fontStyle: "normal"
+                        },
+                        }
+                    })
+                </script>
+
+                <!-- Staafdiagram -->
+                <canvas class="bar graph"></canvas>
+                <script>
+                    Chart.defaults.global.defaultFontFamily = 'Lao MN';
+                    var myBar = document.querySelector(".bar").getContext('2d');
+                    var barGraph = new Chart(myBar, {
+                    type: "bar",
+                    data: {
+                        labels: ['Aarde Newton', 'Mars Newton', 'Raket Newton'],
+                        datasets: [{
+                            backgroundColor: ['rgb(215, 55, 55)', 'rgb(251, 144, 38)', 'rgb(69, 158, 92)'],
+                            data: [7.0, 4.7, 6.3]
+                        }]
+                    },
+                    options: {
+                        aspectRatio: 1,
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: "Zwaartekracht ln Newton",
+                            fontColor: "rgb(255, 255, 255)",
+                            fontSize: 24,
+                            fontStyle: "normal"
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }      
+                });
+                </script>
+            
+            </div>
+
+           
+        </div>
+
+    </body>

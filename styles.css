@@ -1,0 +1,101 @@
+@media screen and (max-width: 767px) {
+    #parent {
+        flex-direction: column;
+    }
+    #son {
+        flex-direction: column;
+    }
+    .bar, .pie {
+        max-width: 50vw;
+    }
+    .arc {
+        display: none !important;
+    }
+    .outside {
+        max-width: 75vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #parent {
+        flex-direction: column;
+    }
+    #son {
+        flex-direction: row;
+    }
+    .bar, .pie {
+        max-width: 35vw;
+    }
+    .outside {
+        max-width: 70vw;
+    }
+    .arc {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #parent {
+        flex-direction: row;
+    }
+
+    .bar, .pie {
+        max-width: 18vw;
+    }
+
+    .bar {
+        order: 3;
+    }
+
+    .arc, .outside {
+        max-width: 36vw;
+    }
+
+    .outside {
+        display: none !important;
+    }
+}
+
+#navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 12rem;
+}
+
+#main {
+    background-color: #1A2035;
+}
+
+#parent {
+    margin: 5.25rem 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#son {
+    display: flex;
+}
+
+html, body, .viewport {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family:"Lao MN";
+  }
+
+.graph {
+    background-color: #202940;
+    border: solid black 1px;
+    color: white;
+    margin: 1rem;
+    padding: 2rem;
+    font-family:"Lao MN";
+
+}
+
+
